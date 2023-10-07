@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    
 }
 
 :root {
@@ -27,9 +29,32 @@ header {
 }
 
 .content div {
-    border: 2px solid black;
+    border: 2px solid var(--second);
     width: 500px;
     height: 70%;
+    border-radius: 16px 16px 5px 5px;
+}
+
+.first-table::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px 10px 0px 0px;
+    top: 0;
+    left: 0;
+    background-color: var(--second);
+}
+
+.second-table::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px 10px 0px 0px;
+    top: 0;
+    left: 0;
+    background-color: var(--second);
 }
 
 button {
@@ -44,6 +69,13 @@ button {
     margin: 10%;
 }
 
-.add-btn img {
-   
+.add-btn .fa-solid {
+    color: var(--second);
+    font-size: 125px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.add-btn .fa-solid:hover {
+    color: #987dfa;
 }
