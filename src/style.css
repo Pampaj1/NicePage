@@ -3,10 +3,47 @@
     padding: 0;
 }
 
+:root {
+    --main: #ffffff;
+    --second: #BEADFA;
+    --third: #DFCCFB;
+}
+
 body {
-    background-color: black;
+    
 }
 
 header {
-    
+
+}
+
+.content {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.content div {
+    border: 2px solid black;
+    width: 500px;
+    height: 70%;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+.add-btn {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 10%;
+}
+
+.add-btn img {
+   
 }
