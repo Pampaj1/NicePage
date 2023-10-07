@@ -7,12 +7,13 @@
 
 :root {
     --main: #ffffff;
-    --second: #BEADFA;
+    --second: #987dfa;
     --third: #DFCCFB;
+    --fourth: #BEADFA;
 }
 
 body {
-    
+    background: linear-gradient(245.59deg, #ffffff 0%, #D0BFFF 28.53%, #DFCCFB 75.52%);
 }
 
 header {
@@ -77,5 +78,5 @@ button {
 }
 
 .add-btn .fa-solid:hover {
-    color: #987dfa;
+    color: var(--fourth);
 }
