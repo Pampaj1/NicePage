@@ -3,6 +3,7 @@ const addBar = document.querySelector('.row')
 
 addBtn.addEventListener('click', () => {
     addBar.classList.toggle('show')
-    addBtn.classList.toggle('minus')
+    addBtn.classList.toggle('fa-circle-minus')
+    addBtn.classList.toggle('fa-circle-plus')
 })
 
