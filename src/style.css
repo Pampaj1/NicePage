@@ -159,6 +159,10 @@ button {
         margin: 0 25px;
     }
 
+    .box {
+        height: 85vh;
+    }
+
     .add-btn .fa-solid {
         font-size: 80px;
     }
