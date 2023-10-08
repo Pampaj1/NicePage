@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    font-family: 'Rubik', sans-serif;
 }
 
 :root {
@@ -13,49 +15,47 @@
 }
 
 body {
+    background-color: #987dfa;
+    overflow: hidden;
+}
+
+.box {
+    display: block;
+    border-radius: 16px;
+    width: 90vw;
+    height: 80vh;
     background: linear-gradient(245.59deg, #ffffff 0%, #D0BFFF 28.53%, #DFCCFB 75.52%);
+    margin: 50px auto 0;
 }
 
 header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    color: var(--second);
+}
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 30px;
+    font-size: 30px;
+}
+
+.logo h1{
+    font-size: 35px;
 }
 
 .content {
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     justify-content: center;
-    margin-top: 50px;
+    align-items: center;
     gap: 20px;
-}
-
-.content div {
-    border: 2px solid var(--second);
-    width: 500px;
-    height: 70%;
-    border-radius: 16px 16px 5px 5px;
-}
-
-.first-table::after {
-    content: " ";
-    display: block;
-    width: 100%;
-    height: 60px;
-    border-radius: 10px 10px 0px 0px;
-    top: 0;
-    left: 0;
-    background-color: var(--second);
-}
-
-.second-table::after {
-    content: " ";
-    display: block;
-    width: 100%;
-    height: 60px;
-    border-radius: 10px 10px 0px 0px;
-    top: 0;
-    left: 0;
-    background-color: var(--second);
 }
 
 button {
@@ -70,8 +70,11 @@ button {
     margin: 10%;
 }
 
-.add-btn .fa-solid {
+.fa-solid {
     color: var(--second);
+}
+
+.add-btn .fa-solid {
     font-size: 125px;
     cursor: pointer;
     transition: .2s ease-in-out;
