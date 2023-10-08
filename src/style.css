@@ -76,6 +76,14 @@ header {
     gap: 20px;
 }
 
+ul li {
+    list-style: none;
+    font-size: 1.5rem;
+    color: black;
+    padding: 20px;
+    cursor: pointer;
+}
+
 button {
     background-color: transparent;
     border: none;
@@ -104,8 +112,9 @@ button {
 
 .row {
     display: flex;
+    visibility: hidden;
     position: fixed;
-    top: 40%;
+    top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
     align-items: center;
@@ -115,6 +124,14 @@ button {
     padding-left: 20px;
     width: 80%;
     font-weight: 14px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+    top: 20%;
 }
 
 .row input {
@@ -144,7 +161,7 @@ button {
     background-color: #BEADFA;
 }
 
-@media only screen and (max-width: 445px) {
+@media only screen and (max-width: 450px) {
     .logo {
         font-size: 25px;
         margin: 0 25px;
@@ -161,6 +178,10 @@ button {
 
     .box {
         height: 85vh;
+    }
+
+    ul li {
+        font-size: 1rem;
     }
 
     .add-btn .fa-solid {
