@@ -14,9 +14,14 @@
     --fourth: #BEADFA;
 }
 
+::placeholder {
+    color: var(--main);
+}
+
 body {
     background-color: #987dfa;
     overflow: hidden;
+    position: relative;
 }
 
 .box {
@@ -97,6 +102,47 @@ button {
     color: var(--fourth);
 }
 
+.row {
+    display: flex;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: space-between;
+    background-color: #BEADFA;
+    border-radius: 30px;
+    padding-left: 20px;
+    width: 80%;
+    font-weight: 14px;
+}
+
+.row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 16px;
+    color: var(--main);
+}
+
+.row button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: var(--second);
+    color: var(--main);
+    font-size: 20px;
+    border-radius: 0px 30px 30px 0px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.row button:hover {
+    background-color: #BEADFA;
+}
+
 @media only screen and (max-width: 445px) {
     .logo {
         font-size: 25px;
@@ -114,5 +160,9 @@ button {
 
     .add-btn .fa-solid {
         font-size: 80px;
+    }
+
+    .row button {
+        padding: 16px 25px;
     }
 }
