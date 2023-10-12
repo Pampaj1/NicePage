@@ -1,5 +1,5 @@
 //Input element with which you can add new tasks
-const inputBox = document.getElementById('.input-box')
+const inputBox = document.getElementById('input-box')
 const addBar = document.querySelector('.row')
 
 
@@ -11,11 +11,6 @@ const taskContainer = document.querySelector('.task-container')
 const task = document.querySelector('.list-element')
 
 
-
-
-task.addEventListener('click', () => {
-    task.classList.toggle('checked')
-})
 
 addBtn.addEventListener('click', () => {
     addBar.classList.toggle('show')
@@ -31,6 +26,11 @@ function addTask () {
         const li = document.createElement("li")
         li.innerHTML = inputBox.value
         taskContainer.appendChild(li)
+        li.classList.add('list-element')
+
+        li.addEventListener('click', () => {
+            li.classList.toggle('checked')
+        })
     }
     inputBox.value = ''
 }
