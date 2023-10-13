@@ -23,14 +23,35 @@ function addTask () {
     if (inputBox.value === '') {    
         alert('error')
     } else {
-        const li = document.createElement("li")
+        let li = document.createElement("li")
         li.innerHTML = inputBox.value
         taskContainer.appendChild(li)
         li.classList.add('list-element')
-
-        li.addEventListener('click', () => {
-            li.classList.toggle('checked')
-        })
+        let span = document.createElement("span")
+        span.innerHTML = "\u00d7"
+        li.appendChild(span)
     }
     inputBox.value = ''
+    saveData()
 }
+
+taskContainer.addEventListener('click', (e) => {
+    if (e.target.tagName === "LI") {
+        e.target.classList.toggle('checked')
+        saveData()
+    } else if (e.target.tagName === "SPAN") {
+        e.target.parentElement.remove()
+        saveData()
+    }
+}, false)
+
+
+function saveData() {
+    localStorage.setItem("data", taskContainer.innerHTML)
+}
+
+function showData() {
+    taskContainer.innerHTML = localStorage.getItem("data")
+}
+
+showData()
