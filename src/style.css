@@ -74,6 +74,7 @@ header {
     padding: 0px 10%;
     align-items: center;
     gap: 20px;
+    
 }
 
 ul {
@@ -90,7 +91,6 @@ ul li {
     position: relative;
     font-size: 1.5rem;
     padding: 20px;
-    text-wrap: wrap;
 }
 
 ul li.checked {
